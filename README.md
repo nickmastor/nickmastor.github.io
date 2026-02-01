@@ -1,10 +1,10 @@
-<<<<<<< HEAD
+
 # Nikolaos Mastorakis - Personal Website
 
 Personal academic website hosted on GitHub Pages.
 
-Visit: https://NikolaosMastorakis.github.io
+Visit: https://nickmastor.github.io
 =======
-# NikolaosMastorakis.github.io
+# nickmastor.github.io
 Personal CV
->>>>>>> origin/master
+
