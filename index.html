@@ -14,8 +14,8 @@
       --primary-dark: #1e40af;
       --secondary: #7c3aed;
       --accent: #06b6d4;
-      --red-accent: #C62828;
-      --red-accent-light: #f87171;
+      --red-accent: #2563eb;
+      --red-accent-light: #7c3aed;
       --fg: #1f2937;
       --fg-light: #4b5563;
       --muted: #6b7280;
@@ -44,7 +44,7 @@
       --shadow-lg: rgba(0, 0, 0, 0.5);
       --sidebar-bg: #1f2937;
       --bg-gradient: linear-gradient(135deg, #111827 0%, #1f2937 100%);
-      --red-accent: #f87171;
+      --red-accent: #7c3aed;
     }
     
     * { 
@@ -134,12 +134,13 @@
     }
     
     .affiliation a {
-      color: var(--red-accent);
+      color: var(--primary);
       text-decoration: none;
     }
     
     .affiliation a:hover {
       text-decoration: underline;
+      color: var(--secondary);
     }
     
     .theme-toggle {
@@ -149,21 +150,22 @@
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      border: 1px solid rgba(198, 40, 40, 0.4);
+      border: 1px solid rgba(37, 99, 235, 0.4);
       background-color: var(--bg);
-      color: var(--red-accent);
+      color: var(--primary);
       cursor: pointer;
       transition: all 0.2s ease;
     }
     
     .theme-toggle:hover {
-      background-color: rgba(248, 113, 113, 0.15);
+      background-color: rgba(37, 99, 235, 0.15);
+      border-color: var(--primary);
     }
     
     [data-theme="dark"] .theme-toggle {
       background-color: var(--card);
       color: #fbbf24;
-      border-color: rgba(248, 113, 113, 0.5);
+      border-color: rgba(124, 58, 237, 0.5);
     }
     
     .theme-toggle svg {
@@ -195,7 +197,7 @@
     
     .sidebar-nav a:hover,
     .sidebar-nav a.active-link {
-      color: var(--red-accent);
+      color: var(--primary);
       transform: scale(1.05);
     }
     
@@ -222,7 +224,7 @@
     }
     
     .contact-item:hover {
-      color: var(--red-accent);
+      color: var(--primary);
     }
     
     .contact-item svg {
@@ -249,7 +251,8 @@
       margin: 0 0 24px;
       font-weight: 700;
       color: var(--fg);
-      border-bottom: 2px solid var(--red-accent-light);
+      border-bottom: 2px solid;
+      border-image: linear-gradient(135deg, var(--primary), var(--secondary)) 1;
       padding-bottom: 8px;
       transition: color 0.3s ease;
     }
@@ -280,7 +283,7 @@
     }
     
     .meta { 
-      color: var(--red-accent);
+      color: var(--primary);
       font-size: 14px; 
       margin-top: 8px;
       font-weight: 500;
@@ -300,13 +303,19 @@
     
     .pill { 
       display: inline-block;
-      padding: 6px 12px;
-      border-radius: 9999px;
-      background: rgba(248, 113, 113, 0.15);
-      color: var(--red-accent);
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
       margin: 4px 8px 4px 0;
       font-size: 13px;
       font-weight: 500;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+      transition: transform 0.2s ease;
+    }
+    
+    .pill:hover {
+      transform: scale(1.05);
     }
     
     a {
@@ -317,7 +326,7 @@
     }
     
     a:hover {
-      color: var(--red-accent);
+      color: var(--primary-dark);
       text-decoration: underline;
     }
     
@@ -627,19 +636,19 @@
         <section id="awards">
           <div class="card">
             <h2>Awards</h2>
-            <div style="margin-bottom: 24px; padding: 16px; border-radius: 12px; border: 1px solid rgba(248, 113, 113, 0.3); background: rgba(248, 113, 113, 0.1);">
+            <div style="margin-bottom: 24px; padding: 16px; border-radius: 12px; border: 1px solid rgba(37, 99, 235, 0.3); background: rgba(37, 99, 235, 0.1);">
               <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 8px;">
                 <strong style="color: var(--fg);">30th IFIP/IEEE VLSI-SoC — Best Paper Award (Co-author)</strong>
-                <span class="pill" style="font-size: 12px; padding: 4px 8px;">Oct 2022</span>
+                <span style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 4px 8px; border-radius: 12px; font-size: 12px; font-weight: 500;">Oct 2022</span>
               </div>
               <div style="color: var(--fg-light); font-size: 14px;">
                 Co-author in <a href="https://www.ece.ntua.gr/gr/article/544" target="_blank" rel="noopener">best paper award</a> in 30th IFIP/IEEE VLSI-SoC • Patras, Greece
               </div>
             </div>
-            <div style="padding: 16px; border-radius: 12px; border: 1px solid rgba(248, 113, 113, 0.3); background: rgba(248, 113, 113, 0.1);">
+            <div style="padding: 16px; border-radius: 12px; border: 1px solid rgba(37, 99, 235, 0.3); background: rgba(37, 99, 235, 0.1);">
               <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 8px;">
                 <strong style="color: var(--fg);">Moving Education Forward — Eurobank Scholarship</strong>
-                <span class="pill" style="font-size: 12px; padding: 4px 8px;">Jul 2015</span>
+                <span style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 4px 8px; border-radius: 12px; font-size: 12px; font-weight: 500;">Jul 2015</span>
               </div>
               <div style="color: var(--fg-light); font-size: 14px;">
                 Top graduate from high school • Heraklion, Greece
